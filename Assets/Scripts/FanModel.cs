@@ -9,7 +9,8 @@ public class FanModel : MonoBehaviour
     public GameObject player;
     Rigidbody[] playerRigidbodyList; 
 
-    private int triggerDistance = 10;
+    private int triggerDistanceZ = 20;
+    private int triggerDistanceX = 4; 
     
     void Start()
     {
@@ -19,9 +20,12 @@ public class FanModel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     float dist = Math.Abs(player.transform.position.z - gameObject.transform.position.z);
-     Debug.Log(dist);
-     if (dist <= triggerDistance) 
+     float distZ = gameObject.transform.position.z - player.transform.position.z;
+     float distX = gameObject.transform.position.x - player.transform.position.x; 
+     bool isZActive = distZ > 0 && distZ <= triggerDistanceZ; 
+     bool isXActive = Math.Abs(distX) <= triggerDistanceX;
+     
+     if (isXActive && isZActive) 
      {
         foreach(Rigidbody rigidbody in playerRigidbodyList) 
         {
