@@ -29,7 +29,7 @@ public class FanModel : MonoBehaviour
      {
         foreach(Rigidbody rigidbody in playerRigidbodyList) 
         {
-            rigidbody.AddForce(0,0,-10);
+            rigidbody.AddForce(0,0,-1000);
         }
      }
 
