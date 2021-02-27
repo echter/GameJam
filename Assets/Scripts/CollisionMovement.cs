@@ -12,7 +12,7 @@ public class CollisionMovement : MonoBehaviour
 
         bodyParts = GetComponentsInChildren<Rigidbody>();
 
-        if (collision.gameObject.name == "Terrain")
+        if (collision.gameObject.name == "Ground")
         {
             foreach (Rigidbody joint in bodyParts)
             {

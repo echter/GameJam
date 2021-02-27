@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 2441c79940171dc43b33badf9fe97828, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: baef7505b9e48404cb74585601f49ff9, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -468,14 +468,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1941201327}
-  skyboxMaterial_Level1: {fileID: 2100000, guid: 8fc56946a1b593c4d8e3e0e94483338e,
+  skyboxMaterial_Level1: {fileID: 2100000, guid: c7a8e24b01cf73e4bad6eb3cb7d40acc,
     type: 2}
-  skyboxMaterial_Level2: {fileID: 2100000, guid: 9aa8ed67591432941bb76f12eb23ff91,
+  skyboxMaterial_Level2: {fileID: 2100000, guid: 56113b3b655ab7349bab4d7d405c258a,
     type: 2}
   skyboxMaterial_Level3: {fileID: 2100000, guid: 2441c79940171dc43b33badf9fe97828,
     type: 2}
   skyboxMaterial_Level4: {fileID: 2100000, guid: bbe9494f815f3c340956427c884b72a0,
     type: 2}
+  skyboxMaterial_Level5: {fileID: 2100000, guid: 7ed994c1997814049b44c36a823bba6c,
+    type: 2}
+  skyboxMaterial_Level6: {fileID: 2100000, guid: baef7505b9e48404cb74585601f49ff9,
+    type: 2}
+  ground_Level1: {fileID: 2100000, guid: 7ff3120c1bc79aa43a2c8311b71cf11d, type: 2}
+  ground_Level2: {fileID: 2100000, guid: 71a6253a38b23374c822bc105a7711b3, type: 2}
+  ground_Level3: {fileID: 2100000, guid: d196f64fb05d09140909df790bdc54c0, type: 2}
+  ground_Level4: {fileID: 2100000, guid: ea5b79bc86754f84cbb3dbceb5939296, type: 2}
+  ground_Level5: {fileID: 2100000, guid: d9060685b6710ba4f9c802865f55e133, type: 2}
+  ground_Level6: {fileID: 2100000, guid: f573f145cb257b9468516625966ff49e, type: 2}
+  currentSkyboxMaterial: {fileID: 0}
+  groundGameObject: {fileID: 866022163}
   playerGameObject: {fileID: 1966361749}
 --- !u!114 &484772677
 MonoBehaviour:
@@ -802,13 +814,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: -0.0042230203, y: 0.9822296, z: -0.07371779, w: -0.1725482}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 8.411, y: 200, z: 0.99300003}
 --- !u!1 &705843937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,7 +1117,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 414499244c2acee4db72480f44f45e20, type: 2}
+  - {fileID: 2100000, guid: 7ff3120c1bc79aa43a2c8311b71cf11d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1549,7 +1561,7 @@ PrefabInstance:
     - target: {fileID: 1200709949271575583, guid: 22b2ef8a0d40e3c4ea4a39ada489e166,
         type: 3}
       propertyPath: m_Name
-      value: CarObject
+      value: Car
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22b2ef8a0d40e3c4ea4a39ada489e166, type: 3}
@@ -2310,7 +2322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941201322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 500, y: 0, z: 20}
+  m_LocalPosition: {x: 500, y: 0.32, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 346496530}

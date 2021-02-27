@@ -23,6 +23,6 @@ public class PlayerController : MonoBehaviour
     {
         distanceTraveled = playerReferenceObject.gameObject.transform.position.z - startPoint;
 
-        level = (int)distanceTraveled / 100;
+        level = (int)(distanceTraveled / 100) + 1;
     }
 }
