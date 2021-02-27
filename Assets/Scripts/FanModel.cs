@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System; 
 
 public class FanModel : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject player;
     Rigidbody[] playerRigidbodyList; 
+
+    private int triggerDistance = 10;
     
     void Start()
     {
@@ -16,11 +19,14 @@ public class FanModel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-     Debug.Log(player.transform.position);
-
-     foreach(Rigidbody rigidbody in playerRigidbodyList) {
-         rigidbody.AddForce(0,2000,0);
+     float dist = Math.Abs(player.transform.position.z - gameObject.transform.position.z);
+     Debug.Log(dist);
+     if (dist <= triggerDistance) 
+     {
+        foreach(Rigidbody rigidbody in playerRigidbodyList) 
+        {
+            rigidbody.AddForce(0,0,-10);
+        }
      }
 
     }
